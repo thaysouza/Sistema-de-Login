@@ -19,14 +19,12 @@
 
                 <h1>Entre ou Cadastre-se</h1>
 
-            <form action="#">
-                <input type="email" placeholder="E-mail">
-                <input type="password" placeholder="Senha">
-                <button>Entrar</button>
-            </form>
-             
-             <a href="./cadastro.html">Ainda não possui cadastro? Clique aqui</a>
-
+            <form action="login_usuario.php" method="post">
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="password" name="senha" placeholder="Senha">
+                <button type="submit">Entrar</button>
+                <a href="./cadastro.php">Ainda não possui cadastro? Clique aqui</a>
+           </form>
 
             </div>
             
