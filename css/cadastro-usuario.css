@@ -1,0 +1,62 @@
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: #53c794;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .card {
+    display: flex;
+    justify-content: center;
+    width: 464px;
+    height: 600px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+main .card form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+main .card h1 {
+    margin-bottom: 16px;
+}
+main .card input {
+    display: block;
+    width: 70%;
+    margin-top: 16px;
+    padding-left: 16px;
+    height: 48px;
+    border-radius: 6px;
+    border: 1px solid #b8b8b8
+}
+main .card button {
+    width: 70%;
+    margin-top: 16px;
+    text-align: center;
+    height: 48px;
+    border-radius: 6px;
+    background-color: #53c794;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+main .card a {
+    margin-top: 8px;
+    width: 70%;
+}
+
+@media (max-width: 576px) {
+    main .card {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    main .card input, main .card button, main .card a {
+        width: 80%;
+    }
+}

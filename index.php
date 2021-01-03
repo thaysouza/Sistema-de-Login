@@ -1,44 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Entre ou cadastre-se</title>
-    <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/global.css">
-
-
+    <link rel="stylesheet" href="./css/login.css">
 </head>
-
 <body>
-  
     <main>
-
-        <section class="painel-login">
-            
+        <section class="login">
             <div class="card">
-
-                <h1>Entre ou Cadastre-se</h1>
-
-            <form action="login_usuario.php" method="post">
-                <input type="email" name="email" placeholder="E-mail">
-                <input type="password" name="senha" placeholder="Senha">
-                <button type="submit">Entrar</button>
-                <a href="./cadastro.php">Ainda não possui cadastro? Clique aqui</a>
-           </form>
-
+                <form action="./login_usuario.php" method="post">
+                    <h1>Entre ou cadastre-se</h1>
+                    <input type="email" name="email" placeholder="Digite o seu e-mail">
+                    <input type="password" name="senha" placeholder="Digite a sua senha">
+                    <button type="submit"><b>Entrar</b></button>
+                    <a href="./cadastro.php">Ainda não possui cadastro? Clique aqui.</a>
+                </form>
             </div>
-            
         </section>
-
-        
-        <section class="painel-imagem">
-            <img src="./images/login.svg" alt="login">
+        <section class="cadastro">
+            <div class="image"></div>
         </section>
-
-
     </main>
-
-
 </body>
-
 </html>

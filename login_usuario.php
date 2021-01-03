@@ -19,8 +19,9 @@ if(strlen($email) > 3 && strlen($senha) > 3){
      $usuarios = mysqli_fetch_all($result);
 
      $_SESSION['nome'] = $usuarios[0][1];
-     $_SESSION['email'] = $usuarios[0][2];
-     $_SESSION['senha'] = $usuarios[0][3];
+     $_SESSION['imagem'] = $usuarios[0][2];
+     $_SESSION['email'] = $usuarios[0][3];
+     $_SESSION['senha'] = $usuarios[0][4];
 
      header('Location: home.php ');
   

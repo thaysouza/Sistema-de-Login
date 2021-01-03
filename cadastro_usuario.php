@@ -10,6 +10,7 @@
 
 //recuperando informações do formulário
 $nome = $_POST['nome'];
+$imagem = $_POST['imagem'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 $conf_senha = $_POST['conf_senha'];
@@ -25,7 +26,7 @@ if (strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha === 
     //$conn = mysqli_connect(host, user, senha, database);
     $conn = mysqli_connect("localhost", "root" ,"", "sistema");//conectando ao bd
 
-    $sql = "INSERT INTO usuarios (nome, email, senha) values ('$nome', '$email', '$senha_cripto')";
+    $sql = "INSERT INTO usuarios (nome,imagem, email, senha) values ('$nome','$imagem', '$email', '$senha_cripto')";
    
     //recebe 2 parametro : conexão e instrução sql
    mysqli_query($conn, $sql); //ou $conn->query($sql);
