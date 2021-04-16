@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Entre ou cadastre-se</title>
 
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/login.css">
 </head>
+
 <body>
     <main>
         <section class="login">
@@ -28,4 +30,5 @@
         </section>
     </main>
 </body>
+
 </html>

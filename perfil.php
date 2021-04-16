@@ -6,10 +6,8 @@ session_start();
 if (!isset($_SESSION['nome'])) {
   header('Location: index.php');
   exit;
-} else {
-  $conn = mysqli_connect("localhost", "root", "", "sistema");
-  $postagens = $conn->query("SELECT * FROM postagens JOIN usuarios WHERE postagens.fk_usuario = usuarios.id  ORDER BY id_postagens DESC");
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -22,7 +20,7 @@ if (!isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="./css/home.css">
-  <title>home</title>
+  <title>perfil</title>
 </head>
 
 <body>
@@ -53,36 +51,45 @@ if (!isset($_SESSION['nome'])) {
   <!--conteudo-->
   <main class="container">
 
-    <form class="form-row mt-5" action="cadastro_postagens.php" method="post">
-      <input class="col-9 form-control" type="text" name="post" placeholder="No que você está pensando, <?php echo $_SESSION['nome'] ?> ? ">
-      <button class="col-3 btn" type="submit">Publicar</button>
-    </form>
+
+    <section class="row pt-5">
 
 
-    <?php
-    //percorre o array
-    if ($postagens->num_rows > 0) {
-      foreach ($postagens as $postagem) {
+      <div class="col-ld-4 border border-danger">
+        <img class="rounded-circle" style="height: 300px; width: 300px;" src="<?php echo $_SESSION['imagem'] ?>" alt="<?php echo $_SESSION['nome'] ?>">
+      </div>
 
-    ?>
+      <div class="col-ld-8  border border-danger">
 
-        <div class="card mt-5">
-          <div class="card-header">
-            <img class="rounded-circle" src="<?php echo $postagem["imagem"] ?>" alt="<?php echo $postagem['nome'] ?>">
-            <h5 class="ml-3 mb-0"><?php echo $postagem['nome'] ?></h5>
-          </div>
-          <div class="card-body">
-            <?php echo $postagem["conteudo"] ?>
-          </div>
-        </div>
+        <h1><?php echo $_SESSION['nome'] ?></h1>
+        <h4><?php echo $_SESSION['email'] ?></h4>
+      </div>
+    </section>
 
-    <?php
-      }
-    }
-    ?>
+
+    <section class="mt-5 border p-5">
+      <div class="alert alert-danger" role="alert">
+        Cuidado! ao remover a conta, não poderá ser recuperada!
+      </div>
+
+      <button class="btn btn-danger" onclick="confirmar()">Remover a conta</button>
+    </section>
 
 
   </main>
+
+
+  <script>
+    function confirmar() {
+      let confirmacao = confirm("Você quer realmente excluir a conta?");
+
+      if (confirmacao == true) {
+        location.href = "remover_conta.php?id=" + <?php echo $_SESSION["id"] ?>
+      }
+    }
+  </script>
+
+
 
 
 

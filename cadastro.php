@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastre-se</title>
-    
+
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/cadastro-usuario.css">
 </head>
+
 <body>
     <main>
         <div class="card">
@@ -19,9 +21,10 @@
                 <input type="password" name="senha" placeholder="Digite uma senha">
                 <input type="password" name="conf_senha" placeholder="Confirme a sua senha">
                 <button type="submit"><b>Cadastre-se</b></button>
-                <a href="./index.php">Já possui cadastro? Realize o login.</a>            
+                <a href="./index.php">Já possui cadastro? Realize o login.</a>
             </form>
         </div>
     </main>
 </body>
+
 </html>
